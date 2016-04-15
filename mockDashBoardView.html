@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Employer Dashboard</title>
+</head>
+<body>
+	<div>
+		<p>List of Pending New Hires :</p>
+
+		<table class="table manage-table table-hover ">
+			<thead>
+				<tr>
+					<th class="col-md-1">Company ID</th>
+					<th class="col-md-2">Employee ID</th>
+					<th class="col-md-3">First Name</th>
+					<th class="col-md-4">Last Name</th>
+					<th class="col-md-5">Designation</th>
+					<th class="col-md-6">Supervisor Name</th>
+					<th class="col-md-7">Hire date</th>
+					<th class="col-md-8">Start Date</th>
+				</tr>
+			</thead>
+			<tr ng-repeat="newhire in pendingList">
+				<td>{{newhire.companyId}}</td>
+				<td>{{newhire.employeeId }}</td>
+				<td>{{newhire.firstName }}</td>
+				<td>{{newhire.lastName }}</td>
+				<td>{{newhire.designation }}</td>
+				<td>{{newhire.supervisorName }}</td>
+				<td>{{newhire.hireDt }}</td>
+				<td>{{newhire.startDt }}</td>
+			</tr>
+		</table>
+		
+		
+		<p>List of Pending New Hire Review List :</p>		
+		
+		<table class="table manage-table table-hover ">
+			<thead>
+				<tr>
+					<th class="col-md-1">Company ID</th>
+					<th class="col-md-2">Employee ID</th>
+					<th class="col-md-3">First Name</th>
+					<th class="col-md-4">Last Name</th>
+					<th class="col-md-5">Designation</th>
+					<th class="col-md-6">Supervisor Name</th>
+					<th class="col-md-7">Hire date</th>
+					<th class="col-md-8">Start Date</th>
+				</tr>
+			</thead>
+			<tr ng-repeat="newhire in pendingReviewList">
+				<td>{{newhire.companyId}}</td>
+				<td>{{newhire.employeeId }}</td>
+				<td>{{newhire.firstName }}</td>
+				<td>{{newhire.lastName }}</td>
+				<td>{{newhire.designation }}</td>
+				<td>{{newhire.supervisorName }}</td>
+				<td>{{newhire.hireDt }}</td>
+				<td>{{newhire.startDt }}</td>
+			</tr>
+		</table>
+		
+		<p>Submitted New Hire List :</p>
+		
+		<table class="table manage-table table-hover ">
+			<thead>
+				<tr>
+					<th class="col-md-1">Company ID</th>
+					<th class="col-md-2">Employee ID</th>
+					<th class="col-md-3">First Name</th>
+					<th class="col-md-4">Last Name</th>
+					<th class="col-md-5">Designation</th>
+					<th class="col-md-6">Supervisor Name</th>
+					<th class="col-md-7">Hire date</th>
+					<th class="col-md-8">Start Date</th>
+					<th class="col-md-9">Status</th>
+				</tr>
+			</thead>
+			<tr ng-repeat="newhire in submittedList">
+				<td>{{newhire.companyId}}</td>
+				<td>{{newhire.employeeId }}</td>
+				<td>{{newhire.firstName }}</td>
+				<td>{{newhire.lastName }}</td>
+				<td>{{newhire.designation }}</td>
+				<td>{{newhire.supervisorName }}</td>
+				<td>{{newhire.hireDt }}</td>
+				<td>{{newhire.startDt }}</td>
+				<td>{{newhire.status }}</td>
+			</tr>
+		</table>
+	</div>
+
+</body>
+</html>
